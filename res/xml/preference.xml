@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <CheckBoxPreference 
+        android:title="Show Temperature" 
+        android:key="tempchk" 
+        android:defaultValue="false"/>
+    
+    <ListPreference 
+        android:defaultValue="C" 
+        android:entryValues="@array/CF" 
+        android:entries="@array/CF" 
+        android:dialogTitle="℃ Or ℉" 
+        android:dependency="tempchk"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:key="CF" 
+        android:title="℃ Or ℉" 
+        android:summary="℃ Or ℉ Check"/>
+    
+    <ListPreference android:defaultValue="Cpu Temp" 
+        android:entries="@array/CB" 
+        android:entryValues="@array/CB" 
+        android:dependency="tempchk"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:key="CB" 
+        android:title="Cpu or Battery" 
+        android:summary="Cpu or Battery view" 
+        android:dialogTitle="Cpu or Battery"/>
+
+    <com.kch.phonecheck.temp.ColorSelector
+        android:key="@string/pref_key_color" 
+        android:title="Text Color Select"
+        android:summary="Color Select"
+        android:dependency="tempchk"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:defaultValue="0"
+        android:entries="@array/custom_color"
+        android:entryValues="@array/custom_color_value"/>
+</PreferenceScreen>

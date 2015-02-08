@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="title">
+        <item>Screen &amp; DeadFixel</item>
+        <item>GPS</item>
+        <item>Battery</item>
+        <item>Temperature</item>
+        <item>System</item>         
+    </string-array>
+    
+    <string-array name="content">
+        <item>화면의 그라데이션, 불량화소를 확인 합니다.</item>
+        <item>GPS를 활용해 현재위치를 추적합니다.</item>
+        <item>배터리의 현재상태, 전압등을 체크합니다.</item>
+        <item>CPU &amp; 배터리의 현재 온도를 체크합니다.</item>      
+        <item>시스템의 사양을 체크합니다.</item>      
+    </string-array>
+
+    
+    <string-array name="CF">
+        <item>C</item>
+        <item>F</item>
+    </string-array>    
+    
+    <string-array name="CB">
+        <item>Cpu Temp</item>
+        <item>Battery Temp</item>
+    </string-array>
+    
+    <string-array name="custom_color">
+        <item>White</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Black</item>
+    </string-array>
+    
+    <string-array name="custom_color_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+       
+    <string-array name="battery_title">
+        <item>Health</item>
+        <item>Level</item>
+        <item>Plugged</item>
+        <item>Status</item>
+        <item>Temperature</item>
+        <item>Technology</item>
+        <item>Voltage</item>        
+        <item>Capacity</item>
+    </string-array>
+    
+    <string-array name="sysinfo_title">      
+        <item>Device</item>
+        <item>Android</item>
+        <item>Display</item>
+    </string-array>
+    
+    <string-array name="sysinfo_content">      
+        <item>Brand</item>
+        <item>Model</item>
+        <item>CPU</item>
+        <item>Board</item>
+        <item>RAM</item>
+        <item>Available RAM</item>
+        <item>Internal Storage</item>
+        <item>Available Storage</item>
+
+        <item>Version</item>
+        <item>ID</item>
+        <item>Kernal</item>
+        <item>SDK</item>
+
+        <item>Screen Size</item>
+        <item>Resolution</item>
+        <item>Destiny</item>
+        <item>X Dpi</item>
+        <item>Y Dpi</item>
+    </string-array>
+</resources>

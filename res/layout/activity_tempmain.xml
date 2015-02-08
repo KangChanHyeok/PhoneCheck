@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.kch.phonecheck"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    tools:context=".temp.TempMain" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="true">
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:paddingTop="10dp" >
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="CPU"
+	            android:textColor="#2267C7" />
+	
+	        <com.kch.phonecheck.temp.CircularProgressBar
+	            android:id="@+id/temp_main_cputemp"
+	            style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
+	            android:layout_width="120dip"
+	            android:layout_height="120dip"
+	            app:titleColor="@android:color/black" 
+	            app:titleSize="90"
+	            app:subtitleColor="@color/black_overlay"/>
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:gravity="center"
+	        android:orientation="vertical"
+	        android:paddingTop="10dp" >
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Battery"
+	            android:textColor="#2267C7" />
+	
+	        <com.kch.phonecheck.temp.CircularProgressBar
+	            android:id="@+id/temp_main_battemp"
+	            style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
+	            android:layout_width="120dip"
+	            android:layout_height="120dip"
+	            app:titleColor="@android:color/black" 
+	            app:titleSize="90"
+	            app:subtitleColor="@color/black_overlay"/>
+	    </LinearLayout>
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#050099"
+            android:text="Setting" />
+    </LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="20dp"
+	    android:baselineAligned="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="℃ Or ℉" />
+		<TextView
+		    android:id="@+id/temp_main_cf"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="30dp"
+		    android:layout_weight="1"
+		    android:textColor="#050099"
+		    android:text="Hello" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="20dp"
+	    android:baselineAligned="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="Cpu or Battery" />
+		<TextView
+		    android:id="@+id/temp_main_cb"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="30dp"
+		    android:layout_weight="1"
+		    android:textColor="#050099"
+		    android:text="Hello" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="20dp"
+	    android:baselineAligned="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="Text Color Select" />
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+			    android:id="@+id/temp_main_imgcolor"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"		    
+			    android:layout_marginLeft="30dp"
+			    android:src="@color/white"
+			    android:background="@drawable/temp_main_stroke"/>
+        </LinearLayout>
+
+	</LinearLayout>	
+</LinearLayout>

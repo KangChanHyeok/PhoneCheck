@@ -1,0 +1,13 @@
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <color name="circular_progress_default_progress">#bada55</color>
+	<color name="circular_progress_default_background">#787878</color>
+	<color name="circular_progress_default_title">#bada55</color>
+	<color name="circular_progress_default_subtitle">#D1D1D1</color>
+	
+	<color name="white">#fcfcfc</color>
+	<color name="red">#f90000</color>
+	<color name="green">#bada55</color>
+	<color name="blue">#0000fc</color>
+	<color name="black">#000000</color>
+</resources>
