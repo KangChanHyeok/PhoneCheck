@@ -6,10 +6,12 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.GestureDetector.OnDoubleTapListener;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -33,10 +35,9 @@ public class LCDTest extends Activity implements OnGestureListener{
 		//getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 		lcd=(FrameLayout)findViewById(R.id.lcd);
 		gest=new GestureDetector(this);
-		
-
 	}
 	
+	//감시할 모션 이벤트를 ontouchevent에 넣어주면 GestureListener가 호출됨!
 	@Override
     public boolean onTouchEvent(MotionEvent me) {
         return gest.onTouchEvent(me);
@@ -51,6 +52,7 @@ public class LCDTest extends Activity implements OnGestureListener{
 	@Override
 	public boolean onDown(MotionEvent e) {
 		// TODO Auto-generated method stub
+
 		return false;
 	}
 
@@ -63,7 +65,10 @@ public class LCDTest extends Activity implements OnGestureListener{
 	@Override
 	public boolean onSingleTapUp(MotionEvent e) {
 		// TODO Auto-generated method stub
-		return false;
+		if(e.getAction()==MotionEvent.ACTION_UP){
+			setNextColor(++count);
+		}
+		return true;
 	}
 
 	@Override
@@ -76,7 +81,7 @@ public class LCDTest extends Activity implements OnGestureListener{
 	@Override
 	public void onLongPress(MotionEvent e) {
 		// TODO Auto-generated method stub
-		
+		getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 	}
 
 	@Override
@@ -100,19 +105,12 @@ public class LCDTest extends Activity implements OnGestureListener{
             	}
             	setNextColor(--count);            	
             }
-            // down to up swipe
-            else if (e1.getY() - e2.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                Toast.makeText(getApplicationContext(), "Swipe up", Toast.LENGTH_SHORT).show();
-            }
-            // up to down swipe
-            else if (e2.getY() - e1.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                Toast.makeText(getApplicationContext(), "Swipe down", Toast.LENGTH_SHORT).show();
-            }
         } catch (Exception e) {
  
         }
         return true;
 	}
+
 	
 	public void setNextColor(int i){
 		switch (i) {
