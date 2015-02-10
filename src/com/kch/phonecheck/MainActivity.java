@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import com.kch.phonecheck.battery.BatteryTest;
 import com.kch.phonecheck.gps.GPSTest;
 import com.kch.phonecheck.lcd.LCDTest;
+import com.kch.phonecheck.multitouch.MultiTouch;
 import com.kch.phonecheck.system.SystemInformation;
 import com.kch.phonecheck.temp.TempAlwaysTop;
 import com.kch.phonecheck.temp.TempTab;
@@ -41,7 +42,7 @@ public class MainActivity extends ListActivity {
         
 		String title[]=getResources().getStringArray(R.array.title);
 		String content[]=getResources().getStringArray(R.array.content);
-		int image[]={R.drawable.screen, R.drawable.gps, R.drawable.battery, R.drawable.temp, R.drawable.device};
+		int image[]={R.drawable.screen, R.drawable.multi_touch, R.drawable.gps, R.drawable.battery, R.drawable.temp, R.drawable.device};
 
 		ArrayList<MainListVo> list=new ArrayList<MainListVo>();
 		for(int i=0; i<getResources().getStringArray(R.array.title).length; i++){			
@@ -63,6 +64,10 @@ public class MainActivity extends ListActivity {
 						startActivity(intent);
 						break;
 					case 1:
+						intent = new Intent(MainActivity.this, MultiTouch.class);
+						startActivity(intent);
+						break;
+					case 2:
 						LocationManager LocMan = (LocationManager)getSystemService(LOCATION_SERVICE);
 						if (!LocMan.isProviderEnabled(LocationManager.GPS_PROVIDER)){
 							AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);  
@@ -87,15 +92,15 @@ public class MainActivity extends ListActivity {
 							startActivity(intent);
 						}
 						break;
-					case 2:
+					case 3:
 						intent = new Intent(parent.getContext(), BatteryTest.class);		
 						startActivity(intent);						
 						break;
-					case 3:
+					case 4:
 						intent = new Intent(parent.getContext(), TempTab.class);		
 						startActivity(intent);						
 						break;		
-					case 4:
+					case 5:
 						intent = new Intent(parent.getContext(), SystemInformation.class);		
 						startActivity(intent);		
 					}

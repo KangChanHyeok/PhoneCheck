@@ -3,11 +3,16 @@
 
     <string name="app_name">Phone Check</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_lcdtest">LCD</string>    
+    <string name="title_activity_lcdtest">LCD</string>
+    <string name="title_activity_multitouch">Multi Touch</string>    
     <string name="title_activity_gpstest">GPS</string>
     <string name="title_activity_battery_test">Battery</string>
     <string name="title_activity_temp_tab">CPU &amp; Battery Temperature</string>
     <string name="title_activity_system_information">System</string>
     <string name="pref_key_color">listview</string>
 
+    <string name="swipe_right">왼쪽에서 오른쪽으로 swipe하거나\n클릭시 다음이미지로 이동</string>
+    <string name="swipe_left">오른쪽에서 왼쪽으로 swipe시 이전이미지로 이동</string>
+    <string name="swipe_longclick">특정 이미지에서 길게~ 누를시\n소프트키 영역을 숨길수 있습니다.(소프트키 사용자용)</string>
+    
 </resources>

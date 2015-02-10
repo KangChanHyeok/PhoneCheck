@@ -2,6 +2,7 @@
 <resources>
     <string-array name="title">
         <item>Screen &amp; DeadFixel</item>
+        <item>Multi Touch</item>
         <item>GPS</item>
         <item>Battery</item>
         <item>Temperature</item>
@@ -10,6 +11,7 @@
     
     <string-array name="content">
         <item>화면의 그라데이션, 불량화소를 확인 합니다.</item>
+        <item>터치 인식을 확인할 수 있습니다.</item>
         <item>GPS를 활용해 현재위치를 추적합니다.</item>
         <item>배터리의 현재상태, 전압등을 체크합니다.</item>
         <item>CPU &amp; 배터리의 현재 온도를 체크합니다.</item>      
