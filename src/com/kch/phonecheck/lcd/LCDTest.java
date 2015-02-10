@@ -6,14 +6,11 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.GestureDetector;
-import android.view.GestureDetector.OnDoubleTapListener;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.widget.FrameLayout;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -25,6 +22,7 @@ public class LCDTest extends Activity implements OnGestureListener{
 	private GestureDetector gest;
 	private int count=0;
 	private FrameLayout lcd;
+	private LinearLayout lin;
     private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_MAX_OFF_PATH = 250;
     private static final int SWIPE_THRESHOLD_VELOCITY = 200;
@@ -34,12 +32,14 @@ public class LCDTest extends Activity implements OnGestureListener{
 		setContentView(R.layout.activity_lcdtest);
 		//getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 		lcd=(FrameLayout)findViewById(R.id.lcd);
+		lin=(LinearLayout)findViewById(R.id.lcd_childlay);		
 		gest=new GestureDetector(this);
 	}
 	
 	//감시할 모션 이벤트를 ontouchevent에 넣어주면 GestureListener가 호출됨!
 	@Override
     public boolean onTouchEvent(MotionEvent me) {
+		lin.setVisibility(View.GONE);
         return gest.onTouchEvent(me);
     }
 	
